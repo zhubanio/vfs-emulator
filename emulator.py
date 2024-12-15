@@ -152,43 +152,43 @@ class VirtualFileSystem:
             raise FileExistsError(f"File '{filename}' already exists.")
         current[filename] = None  # None символизирует пустой файл
 
-       def tree(self, path=None, prefix=""):
+    def tree(self, path=None, prefix=""):
         """
         Выводит дерево файлов и папок начиная с указанного пути.
         Если путь не указан, используется текущая директория.
         """
-            if path is None:
-                path = self.current_path
-    
-            # Получаем текущую директорию
-            current = self.filesystem
-            try:
-                for part in Path(path).parts[1:]:
-                    current = current[part]
-            except KeyError:
-                raise FileNotFoundError(f"Path {path} not found.")
-    
-            # Строка для накопления результата
-            result = []
-    
-            # Рекурсивная функция для построения дерева
-            def _build_tree(subtree, pref):
-                items = list(subtree.keys())
-                for i, item in enumerate(items):
-                    # Определяем символ для последнего элемента
-                    connector = "└── " if i == len(items) - 1 else "├── "
-                    result.append(f"{pref}{connector}{item}")
-    
-                    # Если элемент — директория, рекурсивно выводим её содержимое
-                    if isinstance(subtree[item], dict):
-                        extension = "    " if i == len(items) - 1 else "│   "
-                        _build_tree(subtree[item], pref + extension)
-    
-            # Построение дерева
-            _build_tree(current, prefix)
-    
-            # Возвращаем результат в виде строки
-            return "\n".join(result)
+        if path is None:
+            path = self.current_path
+
+        # Получаем текущую директорию
+        current = self.filesystem
+        try:
+            for part in Path(path).parts[1:]:
+                current = current[part]
+        except KeyError:
+            raise FileNotFoundError(f"Path {path} not found.")
+
+        # Строка для накопления результата
+        result = []
+
+        # Рекурсивная функция для построения дерева
+        def _build_tree(subtree, pref):
+            items = list(subtree.keys())
+            for i, item in enumerate(items):
+                # Определяем символ для последнего элемента
+                connector = "└── " if i == len(items) - 1 else "├── "
+                result.append(f"{pref}{connector}{item}")
+
+                # Если элемент — директория, рекурсивно выводим её содержимое
+                if isinstance(subtree[item], dict):
+                    extension = "    " if i == len(items) - 1 else "│   "
+                    _build_tree(subtree[item], pref + extension)
+
+        # Построение дерева
+        _build_tree(current, prefix)
+
+        # Возвращаем результат в виде строки
+        return "\n".join(result)
 
     def mv(self, source, destination):
         # print("self.current_path:")
