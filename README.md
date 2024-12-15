@@ -27,24 +27,18 @@
 2. Убедитесь, что у вас установлен Python 3. Вы можете скачать его с официального сайта: https://www.python.org/downloads/.
 
 3. Установите необходимые зависимости:
-
-bash
-Копировать код
-pip install -r requirements.txt
+   ```bash
+   pip install -r requirements.txt
 4. Запустите эмулятор:
-
-bash
-Копировать код
-python terminal_gui.py --user <имя_пользователя> --tar_path <путь_к_архиву.tar>
+   ```bash
+   python terminal_gui.py --user <имя_пользователя> --tar_path <путь_к_архиву.tar>
 
 ## Тестирование
 Для выполнения тестов, необходимо использовать модуль unittest.
 
 Тесты для каждой из поддерживаемых команд можно найти в файле test_terminal.py. Чтобы запустить тесты, используйте команду:
-
-bash
-Копировать код
-python -m unittest test_terminal.py
+      ```bash 
+      python -m unittest test_terminal.py
 
 ##Структура проекта
 
