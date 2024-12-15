@@ -22,7 +22,7 @@
 
 1. Клонируйте репозиторий на свой локальный компьютер:
    ```bash
-   git clone https://github.com/ваш_пользователь/vfs-emulator.git
+   git clone https://github.com/zhubanio/vfs-emulator.git
    cd vfs-emulator
 2. Убедитесь, что у вас установлен Python 3. Вы можете скачать его с официального сайта: https://www.python.org/downloads/.
 
