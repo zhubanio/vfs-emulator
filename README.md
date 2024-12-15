@@ -31,7 +31,7 @@
    pip install -r requirements.txt
 4. Запустите эмулятор:
    ```bash
-   python terminal_gui.py --user <имя_пользователя> --tar_path <путь_к_архиву.tar>
+   python emulator.py --user <имя_пользователя> --tar_path <путь_к_архиву.tar>
 
 ## Тестирование
 Для выполнения тестов, необходимо использовать модуль unittest.
@@ -49,8 +49,10 @@
 
       vfs-emulator/
       │
-      ├── terminal_gui.py          # Основной файл для запуска эмулятора
-      ├── virtual_file_system.py   # Реализация виртуальной файловой системы
+      ├── .gitignore
+      ├── archive.tar
+      ├── LICENSE
+      ├── emulator.py          # Основной файл для запуска эмулятора
       ├── test_terminal.py         # Тесты для команд эмулятора
       ├── requirements.txt         # Список зависимостей
       └── README.md                # Документация проекта
