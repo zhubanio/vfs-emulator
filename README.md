@@ -47,8 +47,9 @@ bash
 python -m unittest test_terminal.py
 
 ##Структура проекта
+
 bash
-Копировать код
+
 vfs-emulator/
 │
 ├── terminal_gui.py          # Основной файл для запуска эмулятора
