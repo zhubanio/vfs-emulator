@@ -37,32 +37,19 @@
 Для выполнения тестов, необходимо использовать модуль unittest.
 
 Тесты для каждой из поддерживаемых команд можно найти в файле test_terminal.py. Чтобы запустить тесты, используйте команду:
-      ```bash 
-      python -m unittest test_terminal.py
 
-##Структура проекта
+       python -m unittest test_terminal.py
 
-bash
+## Структура проекта
 
-vfs-emulator/
-│
-├── terminal_gui.py          # Основной файл для запуска эмулятора
-├── virtual_file_system.py   # Реализация виртуальной файловой системы
-├── test_terminal.py         # Тесты для команд эмулятора
-├── requirements.txt         # Список зависимостей
-└── README.md                # Документация проекта
 
-##Лицензия
+      vfs-emulator/
+      │
+      ├── terminal_gui.py          # Основной файл для запуска эмулятора
+      ├── virtual_file_system.py   # Реализация виртуальной файловой системы
+      ├── test_terminal.py         # Тесты для команд эмулятора
+      ├── requirements.txt         # Список зависимостей
+      └── README.md                # Документация проекта
+
+## Лицензия
 Этот проект лицензирован под MIT License.
-
-markdown
-Копировать код
-
-### Шаг 4: Загрузка `README.md` в репозиторий
-
-1. Создайте файл `README.md` в корневой директории вашего проекта, скопируйте туда вышеуказанный текст.
-2. Добавьте файл в git, сделайте коммит и отправьте на GitHub:
-   ```bash
-   git add README.md
-   git commit -m "Добавлен файл README.md"
-   git push origin main
