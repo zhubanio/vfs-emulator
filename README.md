@@ -26,10 +26,8 @@
    cd vfs-emulator
 2. Убедитесь, что у вас установлен Python 3. Вы можете скачать его с официального сайта: https://www.python.org/downloads/.
 
-3. Установите необходимые зависимости:
-   ```bash
-   pip install -r requirements.txt
-4. Запустите эмулятор:
+
+3. Запустите эмулятор:
    ```bash
    python emulator.py --user <имя_пользователя> --tar_path <путь_к_архиву.tar>
 Или например:
