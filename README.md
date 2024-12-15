@@ -32,7 +32,10 @@
 4. Запустите эмулятор:
    ```bash
    python emulator.py --user <имя_пользователя> --tar_path <путь_к_архиву.tar>
+Или например:
 
+      python emulator.py --user user --tar archive.tar
+      
 ## Тестирование
 Для выполнения тестов, необходимо использовать модуль unittest.
 
